@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#342D2D"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="7"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/all_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+
+            android:background="@drawable/main_btn_background_active"
+            android:drawableTop="@drawable/all_icon"
+
+            android:minWidth="70dp"
+            android:minHeight="60dp"
+            android:layout_marginStart="15dp"
+
+            android:text="@string/all"
+            android:textColor="#FF4D00"
+            android:textSize="10sp"
+
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SmallSp" />
+
+        <Button
+            android:id="@+id/groups_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+
+            android:background="@drawable/main_btn_background_inactive"
+            android:drawableTop="@drawable/groups_icon"
+
+            android:minWidth="70dp"
+            android:minHeight="60dp"
+
+            android:text="groups"
+            android:textColor="#342D2D"
+            android:textSize="10dp"
+
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/new_btn"
+            app:layout_constraintStart_toEndOf="@+id/all_btn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/new_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+
+
+            android:drawableTop="@drawable/new_icon"
+
+            android:minWidth="150dp"
+            android:minHeight="60dp"
+            android:layout_marginEnd="15dp"
+
+            android:text="new"
+            android:textColor="#342D2D"
+            android:textSize="10dp"
+
+            app:backgroundTint="#FF4D00"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
