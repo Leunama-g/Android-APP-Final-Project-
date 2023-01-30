@@ -9,10 +9,13 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     Button m_all, m_groups;
+    boolean btn = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportFragmentManager().beginTransaction().add(R.id.mainContent, new allNotesView()).commit();
 
         m_all = findViewById(R.id.all_btn);
         m_groups = findViewById(R.id.groups_btn);
@@ -20,8 +23,9 @@ public class MainActivity extends AppCompatActivity {
         m_all.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                btn = true;
                 //fragment change code
-
+                getSupportFragmentManager().beginTransaction().replace(R.id.mainContent, new allNotesView()).commit();
                 m_all.setBackgroundResource(R.drawable.main_btn_background_active);
                 m_all.setTextColor(Color.parseColor("#FF4D00"));
 
@@ -33,8 +37,9 @@ public class MainActivity extends AppCompatActivity {
         m_groups.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                btn = false;
                 //fragment change code
-
+                getSupportFragmentManager().beginTransaction().replace(R.id.mainContent, new groupView()).commit();
                 m_groups.setBackgroundResource(R.drawable.main_btn_background_active);
                 m_groups.setTextColor(Color.parseColor("#FF4D00"));
 
@@ -43,4 +48,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }

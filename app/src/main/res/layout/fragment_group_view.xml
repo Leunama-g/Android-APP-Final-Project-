@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/scroll_back"
+    tools:context=".groupView">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--dummy linear layout needed for design-->
+        <LinearLayout
+            android:id="@+id/center_point"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal" />
+
+        <!--linear layout for the left side-->
+        <LinearLayout
+            android:id="@+id/left_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/center_point"
+            android:orientation="vertical"
+            >
+
+            <Button
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="7.5dp"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                android:drawableTop="@drawable/work_icon"
+                android:background="@drawable/groups_btn_background"
+                android:text="Work"
+                android:stateListAnimator="@animator/btn_press_anim"
+                android:textColor="@color/second"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:backgroundTint="@null"/>
+            <Button
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="7.5dp"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                android:drawableTop="@drawable/school_icon"
+                android:background="@drawable/groups_btn_background"
+                android:text="school"
+                android:stateListAnimator="@animator/btn_press_anim"
+                android:textColor="@color/second"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:backgroundTint="@null"/>
+            <Button
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="7.5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"
+                android:drawableTop="@drawable/entertainment_icon"
+                android:background="@drawable/groups_btn_background"
+                android:text="entertainment"
+                android:stateListAnimator="@animator/btn_press_anim"
+                android:textColor="@color/second"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:backgroundTint="@null"/>
+
+        </LinearLayout>
+
+        <!--linear layout for the right side-->
+        <LinearLayout
+            android:id="@+id/right_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/center_point"
+            >
+            <Button
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="7.5dp"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                android:drawableTop="@drawable/reminder_icon"
+                android:background="@drawable/groups_btn_background"
+                android:text="reminders"
+                android:stateListAnimator="@animator/btn_press_anim"
+                android:textColor="@color/second"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:backgroundTint="@null"/>
+            <Button
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="7.5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:padding="10dp"
+                android:drawableTop="@drawable/projects_icon"
+                android:background="@drawable/groups_btn_background"
+                android:text="side-projects"
+                android:stateListAnimator="@animator/btn_press_anim"
+                android:textColor="@color/second"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:backgroundTint="@null"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+</ScrollView>
