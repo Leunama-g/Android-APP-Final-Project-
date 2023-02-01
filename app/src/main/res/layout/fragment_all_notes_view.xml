@@ -25,30 +25,8 @@
                 android:layout_height="match_parent"
                 android:layout_alignParentStart="true"
                 android:layout_alignEnd="@+id/center_point"
-                android:orientation="vertical"
-                android:paddingTop="10dp"
-                android:paddingStart="10dp"
-                android:paddingEnd="5dp">
-                <LinearLayout
-                    android:id="@+id/linearLayout3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/note_border"
-                    android:orientation="vertical"
-                    android:padding="10dp"
-                    android:layout_marginBottom="10dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:text="lorum ipsum"
-                        android:textColor="#ADB4BC" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="sdfsdgdfhdfdm,,nsdkjfsjkdbfskddbfskjdfbsjdfbhbsd dfmbsjhfshjf"
-                        android:textColor="@color/white" />
-                </LinearLayout>
+                android:orientation="vertical">
+
 
             </LinearLayout>
 
@@ -59,33 +37,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentEnd="true"
-                android:layout_alignStart="@+id/center_point"
-                android:paddingTop="10dp"
-                android:paddingStart="5dp"
-                android:paddingEnd="10dp">
-                <LinearLayout
-                    android:id="@+id/linearLayout4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/note_border"
-                    android:orientation="vertical"
-                    android:padding="10dp"
-                    android:layout_marginBottom="10dp">
-                    <TextView
-                        android:lines="1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:text="lorum ipsum"
-                        android:textColor="#ADB4BC" />
+                android:layout_alignStart="@+id/center_point">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:maxHeight="250dp"
-                        android:text="sdfsdgdfhdfdm,,nsdkjfsjkdbfskddbfskjdfbsjdfbhbsd dfmbsjhfshjf bdshfhsjhdfshjfsjhdfsjhfsdjfshjfgsjhfsjhfsjhgfshj"
-                        android:textColor="@color/white" />
-                </LinearLayout>
             </LinearLayout>
         </RelativeLayout>
 </ScrollView>

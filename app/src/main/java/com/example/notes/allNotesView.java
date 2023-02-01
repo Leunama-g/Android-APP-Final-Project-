@@ -2,11 +2,19 @@ package com.example.notes;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
+import java.util.Date;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -15,7 +23,7 @@ import android.view.ViewGroup;
  */
 public class allNotesView extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
+
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -55,10 +63,62 @@ public class allNotesView extends Fragment {
         }
     }
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_all_notes_view, container, false);
+    }
+    
+    LinearLayout left, right;
+    Note[] values;
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        left = view.findViewById(R.id.left_layout);
+        right = view.findViewById(R.id.right_layout);
+        //getdata();
+        setUpNoteContainer();
+    }
+
+    private void setUpNoteContainer(){
+        View[] notes = new View[5];
+        TextView title, data;
+        LinearLayout _container;
+
+        String[] tit = {"fsdgdfg","kljlkj;","tytiuiy","bvnmbbm,n","tyrtuyki"};
+
+        for(int i = 0; i < 5; i++){
+            if(i % 2 == 0)
+                notes[i] = getLayoutInflater().inflate(R.layout.note_continer_left, left, false);
+            else
+                notes[i] = getLayoutInflater().inflate(R.layout.note_continer_right, right, false);
+
+            title = notes[i].findViewById(R.id.title);
+            data = notes[i].findViewById(R.id.note);
+            _container = notes[i].findViewById(R.id._container);
+
+            title.setText(tit[i]);
+            data.setText(tit[i]);
+
+            _container.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    view.setBackgroundResource(R.drawable.note_border_work);
+                }
+            });
+
+
+            if(i % 2 == 0)
+                left.addView(notes[i]);
+            else
+                right.addView(notes[i]);
+
+        }
+
+
+
     }
 }
