@@ -6,10 +6,10 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="10dp"
-    android:layout_marginBottom="15dp"
-    android:layout_marginStart="15dp"
-    android:layout_marginEnd="7.5dp"
-    >
+    android:layout_marginTop="15dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginStart="7.5dp"
+    android:layout_marginBottom="15dp">
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"

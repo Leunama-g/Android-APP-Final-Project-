@@ -12,10 +12,6 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
-import java.util.Date;
-
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link allNotesView#newInstance} factory method to
@@ -87,14 +83,25 @@ public class allNotesView extends Fragment {
         View[] notes = new View[5];
         TextView title, data;
         LinearLayout _container;
+        int[] r = {R.drawable.note_border_work,R.drawable.note_border_entertainment, R.drawable.note_border_project, R.drawable.note_border_school,R.drawable.note_border_reminder};
+
 
         String[] tit = {"fsdgdfg","kljlkj;","tytiuiy","bvnmbbm,n","tyrtuyki"};
 
         for(int i = 0; i < 5; i++){
-            if(i % 2 == 0)
-                notes[i] = getLayoutInflater().inflate(R.layout.note_continer_left, left, false);
-            else
-                notes[i] = getLayoutInflater().inflate(R.layout.note_continer_right, right, false);
+            if(i % 2 == 0){
+                if(i == 0)
+                    notes[i] = getLayoutInflater().inflate(R.layout.note_continer_left_top, left, false);
+                else
+                    notes[i] = getLayoutInflater().inflate(R.layout.note_continer_left, left, false);
+            }
+            else{
+                if(i == 1)
+                    notes[i] = getLayoutInflater().inflate(R.layout.note_continer_right_top, right, false);
+                else
+                    notes[i] = getLayoutInflater().inflate(R.layout.note_continer_right, right, false);
+            }
+
 
             title = notes[i].findViewById(R.id.title);
             data = notes[i].findViewById(R.id.note);
@@ -102,11 +109,12 @@ public class allNotesView extends Fragment {
 
             title.setText(tit[i]);
             data.setText(tit[i]);
+            _container.setBackgroundResource(r[i]);
 
             _container.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    view.setBackgroundResource(R.drawable.note_border_work);
+
                 }
             });
 

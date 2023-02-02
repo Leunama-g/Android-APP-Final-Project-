@@ -27,47 +27,47 @@
             android:layout_alignEnd="@+id/center_point"
             android:orientation="vertical"
             >
-
             <Button
+                android:id="@+id/work_btn"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="7.5dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="11dp"
                 android:padding="10dp"
                 android:drawableTop="@drawable/work_icon"
-                android:background="@drawable/groups_btn_background_work"
                 android:text="Work"
                 android:stateListAnimator="@animator/btn_press_anim"
                 android:textColor="@color/second"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:backgroundTint="@null"/>
+                android:backgroundTint="@color/cat_work"/>
             <Button
+                android:id="@+id/school_btn"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="7.5dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="6dp"
                 android:padding="10dp"
                 android:drawableTop="@drawable/school_icon"
-                android:background="@drawable/groups_btn_background_school"
                 android:text="school"
                 android:stateListAnimator="@animator/btn_press_anim"
                 android:textColor="@color/second"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:backgroundTint="@null"/>
+                android:backgroundTint="@color/school"/>
             <Button
+                android:id="@+id/enter_btn"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="7.5dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="15dp"
                 android:padding="10dp"
                 android:drawableTop="@drawable/entertainment_icon"
-                android:background="@drawable/groups_btn_background"
+
                 android:text="entertainment"
                 android:stateListAnimator="@animator/btn_press_anim"
                 android:textColor="@color/second"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:backgroundTint="@null"/>
+                android:backgroundTint="@color/enter"/>
 
         </LinearLayout>
 
@@ -81,32 +81,34 @@
             android:layout_alignStart="@+id/center_point"
             >
             <Button
+                android:id="@+id/rem_btn"
                 android:layout_marginEnd="15dp"
                 android:layout_marginStart="7.5dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="11dp"
                 android:padding="10dp"
                 android:drawableTop="@drawable/reminder_icon"
-                android:background="@drawable/groups_btn_background_reminders"
+
                 android:text="reminders"
                 android:stateListAnimator="@animator/btn_press_anim"
                 android:textColor="@color/second"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:backgroundTint="@null"/>
+                android:backgroundTint="@color/rem"/>
             <Button
+                android:id="@+id/proj_btn"
                 android:layout_marginEnd="15dp"
                 android:layout_marginStart="7.5dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="6dp"
                 android:layout_marginBottom="15dp"
                 android:padding="10dp"
                 android:drawableTop="@drawable/projects_icon"
-                android:background="@drawable/groups_btn_background_projects"
+
                 android:text="side-projects"
                 android:stateListAnimator="@animator/btn_press_anim"
                 android:textColor="@color/second"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:backgroundTint="@null"/>
+                android:backgroundTint="@color/proj"/>
         </LinearLayout>
 
     </RelativeLayout>

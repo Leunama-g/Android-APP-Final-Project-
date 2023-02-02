@@ -10,4 +10,16 @@
 
     <color name="main">#FF4D00</color>
     <color name="second">#342D2D</color>
+
+    <color name="work">#1ED998</color>
+    <color name="enter">#FF1010</color>
+    <color name="proj">#97FF4D</color>
+    <color name="school">#F0F629</color>
+    <color name="rem">#8616D7</color>
+
+    <color name="cat_work">#661ED998</color>
+    <color name="cat_enter">#66FF1010</color>
+    <color name="cat_proj">#6697FF4D</color>
+    <color name="cat_school">#66F0F629</color>
+    <color name="cat_rem">#668616D7</color>
 </resources>

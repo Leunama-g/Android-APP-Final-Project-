@@ -1,5 +1,6 @@
 package com.example.notes;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -55,10 +57,60 @@ public class groupView extends Fragment {
         }
     }
 
+    Button work, reminder, school, project, entertainment;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        View view = inflater.inflate(R.layout.fragment_group_view, container, false);
+        work = view.findViewById(R.id.work_btn);
+        reminder = view.findViewById(R.id.rem_btn);
+        school = view.findViewById(R.id.school_btn);
+        project = view.findViewById(R.id.proj_btn);
+        entertainment = view.findViewById(R.id.enter_btn);
+
+        work.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), cat_view.class);
+                intent.putExtra("cat", "WORK");
+                startActivity(intent);
+            }
+        });
+        reminder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), cat_view.class);
+                intent.putExtra("cat", "REMINDER");
+                startActivity(intent);
+            }
+        });
+        school.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), cat_view.class);
+                intent.putExtra("cat", "SCHOOL");
+                startActivity(intent);
+            }
+        });
+        project.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), cat_view.class);
+                intent.putExtra("cat", "PROJECT");
+                startActivity(intent);
+            }
+        });
+        entertainment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), cat_view.class);
+                intent.putExtra("cat", "ENTERTAINMENT");
+                startActivity(intent);
+            }
+        });
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_group_view, container, false);
+        return view;
     }
 }
