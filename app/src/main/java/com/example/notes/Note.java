@@ -3,8 +3,9 @@ package com.example.notes;
 import java.util.Date;
 
 public class Note {
+    int id;
     String title;
     String data;
-    int category;
+    String category;
     Date lastEdited;
 }

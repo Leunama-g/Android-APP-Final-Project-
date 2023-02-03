@@ -68,27 +68,22 @@ public class allNotesView extends Fragment {
     }
     
     LinearLayout left, right;
-    Note[] values;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         left = view.findViewById(R.id.left_layout);
         right = view.findViewById(R.id.right_layout);
-        //getdata();
         setUpNoteContainer();
     }
 
     private void setUpNoteContainer(){
-        View[] notes = new View[5];
-        TextView title, data;
-        LinearLayout _container;
-        int[] r = {R.drawable.note_border_work,R.drawable.note_border_entertainment, R.drawable.note_border_project, R.drawable.note_border_school,R.drawable.note_border_reminder};
 
+        NoteController nc = new NoteController("");
 
-        String[] tit = {"fsdgdfg","kljlkj;","tytiuiy","bvnmbbm,n","tyrtuyki"};
+        View[] notes = new View[nc.getSize()];
 
-        for(int i = 0; i < 5; i++){
+        for(int i = 0; i < notes.length; i++){
             if(i % 2 == 0){
                 if(i == 0)
                     notes[i] = getLayoutInflater().inflate(R.layout.note_continer_left_top, left, false);
@@ -101,32 +96,8 @@ public class allNotesView extends Fragment {
                 else
                     notes[i] = getLayoutInflater().inflate(R.layout.note_continer_right, right, false);
             }
-
-
-            title = notes[i].findViewById(R.id.title);
-            data = notes[i].findViewById(R.id.note);
-            _container = notes[i].findViewById(R.id._container);
-
-            title.setText(tit[i]);
-            data.setText(tit[i]);
-            _container.setBackgroundResource(r[i]);
-
-            _container.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-
-                }
-            });
-
-
-            if(i % 2 == 0)
-                left.addView(notes[i]);
-            else
-                right.addView(notes[i]);
-
         }
 
-
-
+        nc.populateLinearLayout(left,right,notes);
     }
 }
