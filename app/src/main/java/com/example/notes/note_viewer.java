@@ -94,8 +94,8 @@ public class note_viewer extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(_title.getText().toString().trim().equals("") || _note.getText().toString().trim().equals("")){
-                    Toast.makeText(note_viewer.this, "Title or Note area are empty", Toast.LENGTH_SHORT).show();
+                if(_title.getText().toString().trim().equals("") || _note.getText().toString().trim().equals("") || catSP.getSelectedItem().toString().equals(categoryList[0])){
+                    Toast.makeText(note_viewer.this, "Title, Note, and Category areas are empty", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     DBHelper db = new DBHelper(getApplicationContext());
