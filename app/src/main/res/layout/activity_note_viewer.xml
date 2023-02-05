@@ -39,14 +39,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" >
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/container_constraint"
-            android:layout_margin="10dp"
-            android:padding="2dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="10dp"
             android:background="@drawable/note_border"
-            >
+            android:padding="2dp">
+
+            <Spinner
+                android:id="@+id/cat_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
 
             <EditText
                 android:id="@+id/title_txt"
@@ -55,16 +65,15 @@
                 android:background="@drawable/title_txt_back"
                 android:backgroundTint="@null"
                 android:hint="title"
+                android:inputType="text"
                 android:lines="1"
                 android:maxLines="1"
-                android:inputType="text"
                 android:padding="10dp"
                 android:textColor="#E7F2FF"
                 android:textSize="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
+                app:layout_constraintTop_toBottomOf="@+id/cat_picker" />
 
             <EditText
                 android:id="@+id/note_txt"
@@ -72,10 +81,10 @@
                 android:layout_height="0dp"
                 android:background="@drawable/note_txt_back"
                 android:backgroundTint="@null"
-                android:hint="write note..."
                 android:gravity="top|left"
-                android:lines="20"
+                android:hint="write note..."
                 android:inputType="textMultiLine"
+                android:lines="20"
                 android:padding="10dp"
                 android:textColor="#DAE8F8"
                 android:textSize="20dp"
@@ -83,17 +92,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/title_txt" />
-
-
-
-
-
-
-
-
-
-
-
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

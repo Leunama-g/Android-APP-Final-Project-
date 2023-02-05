@@ -26,10 +26,10 @@ public class cat_view extends AppCompatActivity {
     }
 
     private void setUpNoteContainer(){
-        View[] notes = new View[5];
-        NoteController nc = new NoteController(category);
+        NoteController nc = new NoteController(category, cat_view.this);
+        View[] notes = new View[nc.getSize()];
 
-        for(int i = 0; i < 5; i++){
+        for(int i = 0; i < notes.length; i++){
             if(i % 2 == 0){
                 if(i == 0)
                     notes[i] = getLayoutInflater().inflate(R.layout.note_continer_left_top, left, false);

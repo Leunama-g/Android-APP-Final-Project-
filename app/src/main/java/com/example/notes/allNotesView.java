@@ -77,9 +77,15 @@ public class allNotesView extends Fragment {
         setUpNoteContainer();
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        setUpNoteContainer();
+    }
+
     private void setUpNoteContainer(){
 
-        NoteController nc = new NoteController("");
+        NoteController nc = new NoteController("",getActivity());
 
         View[] notes = new View[nc.getSize()];
 

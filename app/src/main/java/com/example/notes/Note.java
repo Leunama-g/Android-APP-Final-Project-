@@ -1,5 +1,6 @@
 package com.example.notes;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Note {
@@ -7,5 +8,5 @@ public class Note {
     String title;
     String data;
     String category;
-    Date lastEdited;
+    int lastEdited;
 }
